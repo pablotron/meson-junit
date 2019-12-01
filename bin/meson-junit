@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+# load library
+require_relative '../lib/meson-junit'
+
+# invoke command-line interface
+MesonJunit::CLI.run($0, ARGV)
