@@ -7,5 +7,6 @@ ENV BUNDLE_PATH=
 ENV BUNDLE_BIN=
 
 RUN apt-get update && \
-    apt-get install -y ruby ruby-dev rake ruby-nokogiri && \
-    apt autoclean
+    apt-get install -y ruby ruby-dev rake && \
+    apt autoclean && \
+    gem install nokogiri minitest minitest-junit
