@@ -12,7 +12,7 @@ pipeline {
           }
 
           steps {
-            sh 'bundle install && bundle exec gem build meson-junit.gemspec || true'
+            sh 'gem build meson-junit.gemspec || true'
           }
 
           post {
@@ -34,7 +34,7 @@ pipeline {
           }
 
           steps {
-            sh 'bundle install && bundle exec rake test || true'
+            sh 'rake test || true'
 
             // TODO:
             // * rubocop
@@ -56,7 +56,7 @@ pipeline {
           }
 
           steps {
-            sh 'bundle install && bundle exec rake docs && zip -r docs.zip docs || true'
+            sh 'rake docs && zip -r docs.zip docs || true'
           }
 
           post {
