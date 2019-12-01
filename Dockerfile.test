@@ -1,0 +1,12 @@
+FROM debian:stable-slim
+
+# src: https://bundler.io/v2.0/guides/bundler_docker_guide.html
+ENV GEM_HOME="/usr/local/bundler"
+ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
+ENV BUNDLE_PATH=
+ENV BUNDLE_BIN=
+
+RUN apt-get update && \
+    apt-get install -y ruby ruby-dev rake && \
+    apt autoclean && \
+    gem install bundler:2.0.2
