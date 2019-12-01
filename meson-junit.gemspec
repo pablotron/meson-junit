@@ -1,4 +1,4 @@
-require_relative './lib/meson-junit'
+require_relative './lib/meson-junit.rb'
 
 Gem::Specification.new do |s|
   s.name        = 'meson-junit'
