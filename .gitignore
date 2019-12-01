@@ -1,2 +1,4 @@
 *.sw?
 /docs
+README.html
+report.xml
