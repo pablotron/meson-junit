@@ -28,7 +28,8 @@ Gem::Specification.new do |s|
 
   s.files       = Dir['{bin,lib,test}/**/*'] + %w{README.md Rakefile}
 
-  s.add_dependency 'nokogiri'
-  s.add_development_dependency 'minitest'
-  s.add_development_dependency 'minitest-junit'
+  s.add_runtime_dependency 'nokogiri', '~> 1'
+
+  s.add_development_dependency 'minitest', '~> 5'
+  s.add_development_dependency 'minitest-junit', '~> 0.2.0'
 end
