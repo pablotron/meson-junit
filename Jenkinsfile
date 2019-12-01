@@ -12,7 +12,7 @@ pipeline {
           }
 
           steps {
-            sh 'gem build meson-junit.gemspec || true'
+            sh 'bundle install && bundle exec gem build meson-junit.gemspec || true'
           }
 
           post {
